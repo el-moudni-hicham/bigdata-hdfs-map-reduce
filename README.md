@@ -160,4 +160,4 @@ Results :
 
 ## Summary
 
-We have Successfully created the Hadoop MapReduce Project in Java and executed the MapReduce job on Ubuntu.
+I successfully created the Hadoop MapReduce Project in Java and executed the MapReduce job on Ubuntu.
