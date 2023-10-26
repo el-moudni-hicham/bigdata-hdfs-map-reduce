@@ -14,8 +14,6 @@ The applications are implemented in Java and are designed to be run on a Hadoop 
 ## Table of Contents
 
 * [Overview](#overview)
-    * What is MapReduce?
-    * How MapReduce Works?
 * [Applications](#applications)
     * [Sales per cities](#sales-per-cities)
     * [Logs analysis](#logs-analysis)
