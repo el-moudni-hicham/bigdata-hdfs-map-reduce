@@ -18,7 +18,7 @@ The applications are implemented in Java and are designed to be run on a Hadoop 
     * [Sales per cities](#sales-per-cities)
     * [Logs analysis](#logs-analysis)
     * [Words count](#words-count)
-   
+* [Summary](#summary)
 ## Overview 
 
 ### What is MapReduce?
@@ -116,10 +116,16 @@ by using the below execution command :
 
 `hadoop jar sales-map-reduce-2.jar SalesDriver /sales.txt /salesPerCity`
 
-![image](https://github.com/el-moudni-hicham/bigdata-hdfs-map-reduce/assets/85403056/4813bf37-8bda-4fc6-97d0-47057b674ece)
-![image](https://github.com/el-moudni-hicham/bigdata-hdfs-map-reduce/assets/85403056/4c7c4aba-ff5a-46ce-b3ea-befb3bb62ac7)
+This will start the execution of MapReduce job :
+
+![image](https://github.com/el-moudni-hicham/bigdata-hdfs-map-reduce/assets/85403056/707a5896-1dd8-48f1-ac56-df5e8fb4d9cf)
+
+
 
 **Step 5 : Exploring the output result.**
+
+![image](https://github.com/el-moudni-hicham/bigdata-hdfs-map-reduce/assets/85403056/4813bf37-8bda-4fc6-97d0-47057b674ece)
+![image](https://github.com/el-moudni-hicham/bigdata-hdfs-map-reduce/assets/85403056/4c7c4aba-ff5a-46ce-b3ea-befb3bb62ac7)
 
 by using the below command :
 
@@ -139,4 +145,6 @@ This project aims to calculate the number of each word in a file.
 [link to project](https://github.com/el-moudni-hicham/bigdata-hdfs-map-reduce/tree/master/words-count-map-reduce)
 
 
-  
+## Summary
+
+We have Successfully created the Hadoop MapReduce Project in Java and executed the MapReduce job on Ubuntu.
