@@ -27,14 +27,17 @@ The applications are implemented in Java and are designed to be run on a Hadoop 
 MapReduce is a programming model or pattern within the Hadoop framework that
 is used to access big data stored in the Hadoop File System (HDFS).
 
-#### How MapReduce Works?
+### How MapReduce Works?
 At the crux of MapReduce are two functions: Map and Reduce. They are sequenced one after the other.
 
-* The `Map` function takes input from the disk as <key,value> pairs, processes them, and produces another set of intermediate <key,value> pairs as output.
+* **The Map** function takes input from the disk as `<key,value>` pairs, processes them, and produces another set of intermediate `<key,value>`pairs as output.
 
-* The `Reduce` function also takes inputs as <key,value> pairs, and produces <key,value> pairs as output.
+* **The Reduce** function also takes inputs as `<key,value>` pairs, and produces `<key,value>` pairs as output.
 
-<img src="https://github.com/el-moudni-hicham/bigdata-hdfs-map-reduce/assets/85403056/757a8dd2-0ebd-4e8e-907a-1acbbdde383b" width="70%"/>
+Exemple to count letters in a text file :
+<p align="center">
+   <img src="https://github.com/el-moudni-hicham/bigdata-hdfs-map-reduce/assets/85403056/757a8dd2-0ebd-4e8e-907a-1acbbdde383b" width="70%"/>
+</p>
 
 ## Applications
 
@@ -42,6 +45,52 @@ At the crux of MapReduce are two functions: Map and Reduce. They are sequenced o
 This project aims to calculate the sum of sales per cities.
 
 [link to project](https://github.com/el-moudni-hicham/bigdata-hdfs-map-reduce/tree/master/ventes-map-reduce)
+
+* Implementation of Mapper Class :
+
+```java
+public class SalesMapper extends Mapper<LongWritable, Text, Text, DoubleWritable> {
+    @Override
+    protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
+        String[] tokens = value.toString().split(",");
+        context.write(new Text(tokens[1]), new DoubleWritable(Double.valueOf(tokens[3])));
+    }
+}
+```
+
+* Implementation of ReducerClass :
+
+```java
+public class SalesReducer extends Reducer<Text, DoubleWritable, Text, DoubleWritable> {
+    @Override
+    protected void reduce(Text key, Iterable<DoubleWritable> values, Context context) throws IOException, InterruptedException {
+        long sum = 0;
+        for (DoubleWritable value : values) {
+            sum += value.get();
+        }
+        context.write(key, new DoubleWritable(sum));
+    }
+}
+```
+
+* Implementation of Driver Class :
+
+```java
+public class SalesDriver {
+    public static void main(String[] args) throws Exception {
+        Configuration conf = new Configuration();
+        Job job = Job.getInstance(conf, "Sales");
+        job.setJarByClass(SalesDriver.class);
+        job.setMapperClass(SalesMapper.class);
+        job.setReducerClass(SalesReducer.class);
+        job.setOutputKeyClass(Text.class);
+        job.setOutputValueClass(DoubleWritable.class);
+        FileInputFormat.addInputPath(job, new Path(args[0]));
+        FileOutputFormat.setOutputPath(job, new Path(args[1]));
+        System.exit(job.waitForCompletion(true) ? 0 : 1);
+    }
+}
+```
 
 ### Logs analysis
 This project aims to analyse log files and extract the number of success request for each IP address.
