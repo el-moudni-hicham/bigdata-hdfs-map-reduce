@@ -39,9 +39,17 @@ At the crux of MapReduce are two functions: Map and Reduce. They are sequenced o
 ## Applications
 
 ### Words count
-[link](#https://github.com/el-moudni-hicham/bigdata-hdfs-map-reduce/tree/master/words-count-map-reduce)
+This project aims to calculate the number of each word in a file.
+
+[link to project](https://github.com/el-moudni-hicham/bigdata-hdfs-map-reduce/tree/master/words-count-map-reduce)
 
 ### Sales per cities
+This project aims to calculate the sum of sales per cities.
+
+[link to project](https://github.com/el-moudni-hicham/bigdata-hdfs-map-reduce/tree/master/ventes-map-reduce)
 
 ### Logs analysis
+This project aims to analyse log files and extract the number of success request for each IP address.
+
+[link to project](https://github.com/el-moudni-hicham/bigdata-hdfs-map-reduce/tree/master/logs-analysis-map-reduce)
   
