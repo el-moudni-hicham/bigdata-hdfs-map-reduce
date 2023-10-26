@@ -17,10 +17,10 @@ The applications are implemented in Java and are designed to be run on a Hadoop 
     * What is MapReduce?
     * How MapReduce Works?
 * [Applications](#applications)
-    * [Words count](#words-count)
     * [Sales per cities](#sales-per-cities)
     * [Logs analysis](#logs-analysis)
-
+    * [Words count](#words-count)
+   
 ## Overview 
 
 ### What is MapReduce?
@@ -38,11 +38,6 @@ At the crux of MapReduce are two functions: Map and Reduce. They are sequenced o
 
 ## Applications
 
-### Words count
-This project aims to calculate the number of each word in a file.
-
-[link to project](https://github.com/el-moudni-hicham/bigdata-hdfs-map-reduce/tree/master/words-count-map-reduce)
-
 ### Sales per cities
 This project aims to calculate the sum of sales per cities.
 
@@ -52,4 +47,11 @@ This project aims to calculate the sum of sales per cities.
 This project aims to analyse log files and extract the number of success request for each IP address.
 
 [link to project](https://github.com/el-moudni-hicham/bigdata-hdfs-map-reduce/tree/master/logs-analysis-map-reduce)
+
+### Words count
+This project aims to calculate the number of each word in a file.
+
+[link to project](https://github.com/el-moudni-hicham/bigdata-hdfs-map-reduce/tree/master/words-count-map-reduce)
+
+
   
