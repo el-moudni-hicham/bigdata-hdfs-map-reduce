@@ -46,6 +46,10 @@ This project aims to calculate the sum of sales per cities.
 
 [link to project](https://github.com/el-moudni-hicham/bigdata-hdfs-map-reduce/tree/master/ventes-map-reduce)
 
+Here are the steps to create the Hadoop MapReduce Project in Java :
+
+**Step 1 : Create classes**
+
 * Implementation of Mapper Class :
 
 ```java
@@ -91,6 +95,18 @@ public class SalesDriver {
     }
 }
 ```
+
+**Step 2 : Creating the Jar File of the Project**
+
+by running command `maven install` and the jar will be appear in the target folder :
+
+![image](https://github.com/el-moudni-hicham/bigdata-hdfs-map-reduce/assets/85403056/9eba8035-ee49-4ac8-80a3-d5d06e893055)
+
+**Step 3 : Creating the Text File**
+
+![image](https://github.com/el-moudni-hicham/bigdata-hdfs-map-reduce/assets/85403056/c507d617-ce31-4692-9222-cfe927ba1bd3)
+
+
 
 ### Logs analysis
 This project aims to analyse log files and extract the number of success request for each IP address.
