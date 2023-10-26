@@ -139,10 +139,23 @@ This project aims to analyse log files and extract the number of success request
 
 [link to project](https://github.com/el-moudni-hicham/bigdata-hdfs-map-reduce/tree/master/logs-analysis-map-reduce)
 
+Results :
+
+![image](https://github.com/el-moudni-hicham/bigdata-hdfs-map-reduce/assets/85403056/27e3bb82-0b11-45e4-be9b-a3ae623be065)
+
+![image](https://github.com/el-moudni-hicham/bigdata-hdfs-map-reduce/assets/85403056/7c1925fa-6b7a-44b6-83bb-4cde0b3d9e58)
+
 ### Words count
 This project aims to calculate the number of each word in a file.
 
 [link to project](https://github.com/el-moudni-hicham/bigdata-hdfs-map-reduce/tree/master/words-count-map-reduce)
+
+Results :
+
+![image](https://github.com/el-moudni-hicham/bigdata-hdfs-map-reduce/assets/85403056/89728712-94f0-4bf7-ae40-716a89d57450)
+
+
+![image](https://github.com/el-moudni-hicham/bigdata-hdfs-map-reduce/assets/85403056/5b519ae0-b9f2-4901-903f-6a10bd16f8d8)
 
 
 ## Summary
