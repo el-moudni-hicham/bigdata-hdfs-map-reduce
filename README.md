@@ -48,7 +48,7 @@ This project aims to calculate the sum of sales per cities.
 
 Here are the steps to create the Hadoop MapReduce Project in Java :
 
-**Step 1 : Create classes**
+**Step 1 : Create classes.**
 
 * Implementation of Mapper Class :
 
@@ -96,16 +96,38 @@ public class SalesDriver {
 }
 ```
 
-**Step 2 : Creating the Jar File of the Project**
+**Step 2 : Creating the Jar File of the Project.**
 
 by running command `maven install` and the jar will be appear in the target folder :
 
 ![image](https://github.com/el-moudni-hicham/bigdata-hdfs-map-reduce/assets/85403056/9eba8035-ee49-4ac8-80a3-d5d06e893055)
 
-**Step 3 : Creating the Text File**
+**Step 3 : Creating the Text File.**
 
 ![image](https://github.com/el-moudni-hicham/bigdata-hdfs-map-reduce/assets/85403056/c507d617-ce31-4692-9222-cfe927ba1bd3)
 
+**Step 4 : Putting the file in HDFS root.**
+
+by using the below command :
+
+`hdfs dfs -put sales.txt /`
+
+**Step 5 : Execute the Hadoop MapReduce application.**
+
+by using the below execution command :
+
+`hadoop jar sales-map-reduce-2.jar SalesDriver /sales.txt /salesPerCity`
+
+![image](https://github.com/el-moudni-hicham/bigdata-hdfs-map-reduce/assets/85403056/4813bf37-8bda-4fc6-97d0-47057b674ece)
+![image](https://github.com/el-moudni-hicham/bigdata-hdfs-map-reduce/assets/85403056/4c7c4aba-ff5a-46ce-b3ea-befb3bb62ac7)
+
+**Step 5 : Exploring the output result.**
+
+by using the below command :
+
+`hdfs dfs -cat /salesPerCity/part-r-00000`
+
+![image](https://github.com/el-moudni-hicham/bigdata-hdfs-map-reduce/assets/85403056/5dc9d52c-b1cd-4dcf-85a4-3528814505a7)
 
 
 ### Logs analysis
